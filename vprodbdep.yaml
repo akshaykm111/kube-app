@@ -26,10 +26,10 @@ spec:
               containerPort: 3306
           env:
             - name: MYSQL_ROOT_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: app-secret
-                  key: db-pass
+              value: vprodbpass
+             #  secretKeyRef:
+               #  name: app-secret
+              #    key: db-pass //
       nodeSelector:
         zone: us-west-2a
       volumes:
